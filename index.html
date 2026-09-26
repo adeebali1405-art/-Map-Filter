@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> Map & Filter</h1>
+   <script>
+    /**
+ * Assignment: map() and filter() Exercises
+ * Description: Solutions for array mapping and filtering manipulation.
+ */
+
+// ==========================================
+// PART 1: map() Exercises
+// ==========================================
+
+// 1. Double the numbers
+const numbers1 = [1, 2, 3, 4, 5];
+const doubledNumbers = numbers1.map(num => num * 2);
+console.log("Doubled Numbers:", doubledNumbers); 
+// Expected: [2, 4, 6, 8, 10]
+
+
+// 2. Add 10 to each number
+const numbers2 = [5, 10, 15, 20];
+const addedTen = numbers2.map(num => num + 10);
+console.log("Added 10:", addedTen); 
+// Expected: [15, 20, 25, 30]
+
+
+// 3. Convert names to uppercase
+const names1 = ["ali", "sara", "ahmed"];
+const upperNames = names1.map(name => name.toUpperCase());
+console.log("Uppercase Names:", upperNames); 
+// Expected: ["ALI", "SARA", "AHMED"]
+
+
+// ==========================================
+// PART 2: filter() Exercises
+// ==========================================
+
+// 4. Get even numbers
+const numbers3 = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers3.filter(num => num % 2 === 0);
+console.log("Even Numbers:", evenNumbers); 
+// Expected: [2, 4, 6]
+
+
+// 5. Get numbers greater than 10
+const numbers4 = [5, 12, 8, 20, 3, 15];
+const greaterThan10 = numbers4.filter(num => num > 10);
+console.log("Greater than 10:", greaterThan10); 
+// Expected: [12, 20, 15]
+
+
+// 6. Get names longer than 4 characters
+const names2 = ["Ali", "Ahmed", "Sara", "Usman", "John"];
+const longNames = names2.filter(name => name.length > 4);
+console.log("Names longer than 4 chars:", longNames); 
+// Expected: ["Ahmed", "Usman"]
+
+
+// ==========================================
+// PART 3: Use both filter() and map()
+// ==========================================
+
+// 7. First filter numbers greater than 5, then map them to double
+const numbers5 = [2, 6, 8, 3, 10];
+const filteredAndDoubled = numbers5
+  .filter(num => num > 5) // Step 1: Filters out numbers <= 5, leaving [6, 8, 10]
+  .map(num => num * 2);    // Step 2: Doubles each remaining number, resulting in [12, 16, 20]
+
+console.log("Filtered and Doubled:", filteredAndDoubled); 
+// Expected: [12, 16, 20]
+   </script> 
+</body>
+</html>
